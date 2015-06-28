@@ -15,12 +15,15 @@
         font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
         font-size: 100%;
       }
-      #status {
+      #message {
         /* avoid an excessively wide status text */
         white-space: pre;
         text-overflow: ellipsis;
         overflow: hidden;
-        max-width: 400px;
+        max-width: 800px;
+      }
+      input {
+        font-size: 100%;
       }
     </STYLE>
     <!--
@@ -33,7 +36,6 @@
     <META name="GENERATOR" content="MSHTML 11.00.10074.160">
 </HEAD>   
 <BODY>
-    <DIV id="status"></DIV>
-    <IMG id="image-result" hidden="">
+    <DIV id="message"></DIV>
     <INPUT id="command" type="search">
 </BODY></HTML>

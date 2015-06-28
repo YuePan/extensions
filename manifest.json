@@ -15,6 +15,6 @@
   "permissions": [
     "declarativeContent",
     "activeTab",
-    "https://ajax.googleapis.com/"
+    "http://localhost:8080/"
   ]
 }
