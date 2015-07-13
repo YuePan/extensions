@@ -12,6 +12,19 @@ auto_response = {
     "how": "f"
 }
 
+action_sites = [
+    "weddingwire.com",
+    "theknot.com",
+    "davidsbridal.com",
+    "brides.com",
+    "weddingpaperdivas.com",
+    "weddingchicks.com",
+    "usmarriagelaws.com",
+    "offbeatbridge.com",
+    "marthastewartweddings.com",
+    "bridalguide.com"
+]
+
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
         url = self.get_argument('u')
@@ -26,9 +39,22 @@ class MainHandler(tornado.web.RequestHandler):
             message = input(':')
         response = {'data': message}	
         self.write(json_encode(response))
+        
+        
+class CheckHandler(tornado.web.RequestHandler):
+    def get(self):
+        url = self.get_argument('u')
+        response = {"data": False}
+        for site in action_sites:
+            if u.find(site) > 0:
+                response[]'data'] = True
+                break
+        self.write(json_encode(response))
+
 
 application = tornado.web.Application([
     (r"/search?.*", MainHandler),
+    (r"/check?.*", CheckHandler)
 ])
 
 

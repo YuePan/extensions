@@ -56,7 +56,7 @@ function getCurrentTabUrl(callback) {
  */
 function getMessage(url, query, callback, errorCallback) {
   // Google image search - 100 searches per day.
-  var searchUrl = 'http://localhost:8080/search' +
+  var searchUrl = 'http://c7n6yx1:8080/search' +
     '?v=1.0&q=' + encodeURIComponent(query) + '&u=' + url;
   var x = new XMLHttpRequest();
   x.open('GET', searchUrl);
