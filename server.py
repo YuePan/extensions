@@ -37,17 +37,17 @@ class MainHandler(tornado.web.RequestHandler):
             message = auto_response[query]
         while not message:
             message = input(':')
-        response = {'data': message}	
+        response = {'data': message}
         self.write(json_encode(response))
-        
-        
+
+
 class CheckHandler(tornado.web.RequestHandler):
     def get(self):
         url = self.get_argument('u')
         response = {"data": False}
         for site in action_sites:
-            if u.find(site) > 0:
-                response[]'data'] = True
+            if url.find(site) > 0:
+                response['data'] = True
                 break
         self.write(json_encode(response))
 
